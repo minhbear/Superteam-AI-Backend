@@ -1,14 +1,35 @@
-# Welcome to your CDK TypeScript project
+### API Documentation
 
-This is a blank project for CDK development with TypeScript.
+Endpoint:
+https://<sample>.execute-api.us-east-1.amazonaws.com/prod/docs
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+---
 
-## Useful commands
+Request
+Headers:
+Content-Type: application/json
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `npx cdk deploy`  deploy this stack to your default AWS account/region
-* `npx cdk diff`    compare deployed stack with current state
-* `npx cdk synth`   emits the synthesized CloudFormation template
+Payload:
+{
+"question": "where is AWS Headquater",
+"modelId": "amazon.titan-text-premier-v1:0"
+}
+
+---
+
+Response
+{
+"response": "Seattle, Washington",
+"citation": "https://www.aboutamazon.com/news/amazon-offices/the-next-chapter-for-hq2-sustainable-buildings-surrounded-by-nature",
+"sessionId": "44216406-7884-4947-8ccc-dc5e13fdfb24"
+}
+
+---
+
+Sample cURL
+curl -X POST API_ENDPOINT \
+-H "Content-Type: application/json" \
+-d '{
+"question": "where is AWS Headquater",
+"modelId": "amazon.titan-text-premier-v1:0"
+}'
