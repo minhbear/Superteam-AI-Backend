@@ -1,35 +1,20 @@
-### API Documentation
+# SuperTeam AI 🤖
 
-Endpoint:
-https://<sample>.execute-api.us-east-1.amazonaws.com/prod/docs
+This repo focus on building "brain" with AWS Resource, for overview System Architect please view here **[SuperTeam AI Tele](https://github.com/minhbear/Superteam-Tele-bot)**
 
----
+## **🚀 Deployment Guide**
 
-Request
-Headers:
-Content-Type: application/json
+### Prerequisite
+- Install and configure [AWS CLI](https://aws.amazon.com/cli/)
+- Install and bootstrap [AWS CDK](https://aws.amazon.com/cdk/)
+- Pick a region from the Amazon Bedrock [Supported Regions](https://docs.aws.amazon.com/bedrock/latest/userguide/bedrock-regions.html)
 
-Payload:
-{
-"question": "where is AWS Headquater",
-"modelId": "amazon.titan-text-premier-v1:0"
-}
+### Deploy
+```
+cdk deploy
+```
 
----
+**🚀 Result**
+![](./images/Data-Repo-AI.png)
 
-Response
-{
-"response": "Seattle, Washington",
-"citation": "https://www.aboutamazon.com/news/amazon-offices/the-next-chapter-for-hq2-sustainable-buildings-surrounded-by-nature",
-"sessionId": "44216406-7884-4947-8ccc-dc5e13fdfb24"
-}
-
----
-
-Sample cURL
-curl -X POST API_ENDPOINT \
--H "Content-Type: application/json" \
--d '{
-"question": "where is AWS Headquater",
-"modelId": "amazon.titan-text-premier-v1:0"
-}'
+Next follow the **[Tele repo README](https://github.com/minhbear/Superteam-Tele-bot/blob/main/README.md)**
